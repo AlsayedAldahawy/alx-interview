@@ -49,7 +49,7 @@ def canUnlockAll(boxes):
             if boxes[key] != "unlocked":
                 allkeys += boxes[key]
                 boxes[key] = "unlocked"
-        except KeyError:
+        except (KeyError, IndexError):
             continue
 
     # Recursively check remaining boxes
