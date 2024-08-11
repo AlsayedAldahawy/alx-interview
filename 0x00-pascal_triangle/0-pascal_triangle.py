@@ -3,6 +3,8 @@
 '''
     Module contains Pascal's Triangle gemerator function.
 '''
+
+
 def pascal_triangle(n):
     """
     Generates Pascal's triangle up to the specified number of rows.
@@ -29,4 +31,3 @@ def pascal_triangle(n):
 
         tri.append(row)
     return tri
-
