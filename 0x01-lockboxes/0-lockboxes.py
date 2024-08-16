@@ -48,6 +48,7 @@ def canUnlockAll(boxes):
         try:
             if boxes[key] != "unlocked":
                 allkeys += boxes[key]
+                allkeys.remove(key)
                 boxes[key] = "unlocked"
         except (KeyError, IndexError):
             continue
