@@ -4,16 +4,16 @@ def minOperations(n):
     if n <= 1:
         return 0
 
-    operations = 0
-    divisor = 2
+    minOps = 0
+    i = 0
+    while i <= int((n ** 0.5)):
 
-    while divisor * divisor <= n:
-        while n % divisor == 0:
-            operations += divisor
-            n //= divisor
-        divisor += 1
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                n //= i
+                minOps += i
+                break
+    if minOps:
+        return minOps
 
-    if n > 1:
-        operations += n
-
-    return operations
+    return n
