@@ -10,14 +10,12 @@ def minOperations(n):
 
     minOps = 0
     i = 0
-    while i <= int((n ** 0.5)):
+    while i <= (n ** 0.5):
 
         for i in range(2, int(n ** 0.5) + 1):
             if n % i == 0:
                 n //= i
                 minOps += i
                 break
-    if minOps:
-        return minOps
-
-    return n
+    minOps += n
+    return minOps
